@@ -32,3 +32,21 @@ EOF
 source ~/.bashrc
 ```
 
+### 2. Install Jupyter Hub
+
+```bash
+export JPTOKEN="$(openssl rand -hex 32)"
+
+helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
+helm repo update
+
+kubectl create namespace jupyter
+
+helm upgrade -i jupyterhub jupyterhub/jupyterhub \
+  --set proxy.service.type=ClusterIP \
+  --set proxy.secretToken=$JPTOKEN \
+  --set singleuser.storage.capacity=5Gi \
+  --set singleuser.image.name="qiskit-sandbox" \
+  --set singleuser.image.tag="v2"
+
+

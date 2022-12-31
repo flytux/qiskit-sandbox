@@ -28,6 +28,9 @@ imagePullSecrets: []
 hub:
   revisionHistoryLimit:
   config:
+    Authenticator:
+      admin_users:
+        - jaehoon
     JupyterHub:
       admin_access: true
       authenticator_class: dummy
