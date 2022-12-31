@@ -44,6 +44,8 @@ helm upgrade -i jupyterhub jupyterhub/jupyterhub \
   --set proxy.service.type=ClusterIP \
   --set singleuser.storage.capacity=5Gi \
   --set singleuser.image.name="qiskit-sandbox" \
-  --set singleuser.image.tag="v2"
-
+  --set singleuser.image.tag="v2" \
+  --set hub.config.Authenticator.admin_users[0]=jaehoon \
+  --set hub.config.Authenticator.allowed_users[0]=flytux \
+  --set hub.config.DummyAuthenticator.password=password
 
