@@ -1,6 +1,6 @@
 # qiskit-sandbox
 
-## Create k8sadm user, install docker, install k3s, set shell environment
+### 1. Create k8sadm user, install docker, install k3s, set shell environment
 
 ```bash
 groupadd -g 2000 k8sadm
