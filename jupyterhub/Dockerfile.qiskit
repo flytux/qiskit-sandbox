@@ -1,5 +1,5 @@
 FROM jupyterhub/k8s-singleuser-sample:2.0.0
-USER jovyan 
+USER root 
 RUN pip install qiskit
 RUN pip install qiskit[visualization]
 RUN pip install pip install qiskit[machine-learning]

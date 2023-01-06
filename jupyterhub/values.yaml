@@ -386,9 +386,9 @@ singleuser:
       volumeNameTemplate: volume-{username}{servername}
       storageAccessModes: [ReadWriteOnce]
   image:
-    name: jupyterhub/k8s-singleuser-sample
-    tag: "2.0.0"
-    pullPolicy:
+    name: qiskit-sandbox
+    tag: "v2"
+    pullPolicy: IfNotPresent
     pullSecrets: []
   startTimeout: 300
   cpu:
